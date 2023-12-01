@@ -1,7 +1,8 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import Utils.readDataFromFile
+import day_1.Trebuchet
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    val lines = readDataFromFile("day_1/input_2.txt") { it }
+    val result = Trebuchet(lines).launch(true)
+    println("Result: $result")
 }
